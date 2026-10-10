@@ -1,14 +1,14 @@
 package org.lins.mmmjjkx.rykenslimefuncustomizer.objects.yaml.item;
 
-import com.github.drakescraft_labs.slimefun4.api.items.ItemGroup;
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItem;
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItemStack;
-import com.github.drakescraft_labs.slimefun4.api.recipes.RecipeType;
-import com.github.drakescraft_labs.slimefun4.core.attributes.PiglinBarterDrop;
-import com.github.drakescraft_labs.slimefun4.core.attributes.Radioactivity;
-import com.github.drakescraft_labs.slimefun4.core.attributes.Soulbound;
-import com.github.drakescraft_labs.slimefun4.libraries.dough.collections.Pair;
-import com.github.drakescraft_labs.slimefun4.utils.ColoredMaterial;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.core.attributes.PiglinBarterDrop;
+import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactivity;
+import io.github.thebusybiscuit.slimefun4.core.attributes.Soulbound;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
+import io.github.thebusybiscuit.slimefun4.utils.ColoredMaterial;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;

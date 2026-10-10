@@ -1,7 +1,6 @@
 package org.lins.mmmjjkx.rykenslimefuncustomizer.objects.yaml;
 
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItemStack;
-import io.papermc.lib.PaperLib;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -15,8 +14,22 @@ import org.lins.mmmjjkx.rykenslimefuncustomizer.objects.customs.CustomAddonConfi
 import org.lins.mmmjjkx.rykenslimefuncustomizer.utils.ExceptionHandler;
 
 public abstract class YamlReader<T> {
-    public static final int MAJOR_VERSION = PaperLib.getMinecraftVersion();
-    public static final int MINOR_VERSION = PaperLib.getMinecraftPatchVersion();
+    public static final int MAJOR_VERSION = minecraftVersionPart(0);
+    public static final int MINOR_VERSION = minecraftVersionPart(1);
+
+    /**
+     * Lee la version de Minecraft desde la version de Bukkit del servidor
+     * (p. ej. {@code 1.21.11-R0.1-SNAPSHOT} -> major 1, minor 21).
+     * Sustituye a PaperLib, que el nucleo universal de Slimefun ya no arrastra.
+     */
+    private static int minecraftVersionPart(int index) {
+        try {
+            String[] parts = Bukkit.getBukkitVersion().split("-")[0].split("\\.");
+            return Integer.parseInt(parts[index].trim());
+        } catch (RuntimeException e) {
+            return 0;
+        }
+    }
     private final List<String> lateInits;
     protected final ProjectAddon addon;
     protected final YamlConfiguration configuration;

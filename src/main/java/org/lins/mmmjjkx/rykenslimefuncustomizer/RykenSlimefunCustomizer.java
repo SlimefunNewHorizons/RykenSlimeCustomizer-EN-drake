@@ -1,7 +1,6 @@
 package org.lins.mmmjjkx.rykenslimefuncustomizer;
 
 
-import com.github.drakescraft_labs.labupdate.DrakesLabsReleaseUpdate;
 import com.github.drakescraft_labs.slimefun4.api.SlimefunAddon;
 import java.io.File;
 import java.nio.file.Files;
@@ -36,7 +35,6 @@ public final class RykenSlimefunCustomizer extends JavaPlugin implements Slimefu
 
     @Override
     public void onEnable() {
-        DrakesLabsReleaseUpdate.schedule(this, "RykenSlimefunCustomizer-drake");
 
         // Plugin startup logic
         CommonUtils.completeFile("config.yml");

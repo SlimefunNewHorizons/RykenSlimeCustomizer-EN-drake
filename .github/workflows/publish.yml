@@ -1,0 +1,15 @@
+name: Publish
+on:
+  push:
+    branches: [port-26x]
+    paths: ['src/**', 'pom.xml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  publish:
+    uses: SlimefunNewHorizons/.github/.github/workflows/publish-blob.yml@main
+    with:
+      project: RykenSlimeCustomizer-Drake
+      java-version: '25'
+    secrets: inherit
